@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": false,
-  "homepage": "http://pkfiyah.github.io/napknight.com",
+  "homepage": "http://pkfiyah.github.io",
   "dependencies": {
     "@carbon/icons-react": "^10.25.0",
     "@carbon/themes": "^10.26.0",
