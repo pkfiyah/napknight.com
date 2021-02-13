@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import { SectionTitle, Paragraph } from '../../styles';
-import { WorkItem, WorkTitle, JobTitle } from './styles';
+import { WorkItem, WorkTitle, JobTitle, HighlightTitle, HighlightItem } from './styles';
 
 const Work = ({ user }) => {
   return (
     <Layout user={user}>
       <div>
-        <SectionTitle>Work</SectionTitle>
+        <SectionTitle>Work Experience</SectionTitle>
         <ul>
           {user.work.map((work, i) => (
             <WorkItem key={i}>
@@ -20,6 +20,16 @@ const Work = ({ user }) => {
                 </span>
               </div>
               <Paragraph>{work.summary}</Paragraph>
+              <div>
+                <HighlightTitle>Highlights</HighlightTitle>
+                <ul>
+                  {work.highlights.map((highlight, j) => (
+                    <HighlightItem key={j}>
+                      <Paragraph>{highlight}</Paragraph>
+                    </HighlightItem>
+                  ))}
+                </ul>
+              </div>
             </WorkItem>
           ))}
         </ul>
